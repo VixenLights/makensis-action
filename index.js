@@ -66,14 +66,14 @@ try {
         if (options.includeMorePlugins) {
             console.log('includeMorePlugins');
             const pluginPath = path.join(__dirname, 'nsis', 'plugins');
-            const pluginOutput = path.join(nsis3Directory, 'plugins', 'x86-ansi');
+            const pluginOutput = path.join(nsis3Directory, 'plugins');
             
             copyDirectory(pluginPath, pluginOutput);
         }
 
         if (!!options.includeCustomPluginsPath) {
             console.log('includeCustomPluginsPath');
-            const pluginOutput = path.join(nsis3Directory, 'plugins', 'x86-ansi');
+            const pluginOutput = path.join(nsis3Directory, 'plugins');
 
             copyDirectory(options.includeCustomPluginsPath, pluginOutput);
         }
